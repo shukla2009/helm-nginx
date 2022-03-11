@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: platform
+  name: cicd
 spec:
   destination:
     name: ''
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: nexus/platform/apps
+    path: nexus/platform/cicd/apps
     repoURL: 'https://github.com/shukla2009/helm-nginx.git'
     targetRevision: main
   project: default
