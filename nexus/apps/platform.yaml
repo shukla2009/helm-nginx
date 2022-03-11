@@ -11,4 +11,8 @@ spec:
     path: nexus/platform/apps
     repoURL: 'https://github.com/shukla2009/helm-nginx.git'
     targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
   project: default
