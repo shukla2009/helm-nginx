@@ -1,12 +1,19 @@
-
-source:
-  repoURL: 'https://github.com/shukla2009/helm-nginx.git'
-  path: nexus/platform/apps
-  targetRevision: main
-destination:
-  server: 'https://kubernetes.default.svc'
-  namespace: default
-syncPolicy:
-  automated:
-    prune: true
-    selfHeal: true
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: platform
+spec:
+  destination:
+    name: ''
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: nexus/platform/apps
+    repoURL: 'https://github.com/shukla2009/helm-nginx.git'
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  project: default
+  
