@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cicd
+  name: jenkins
 spec:
   destination:
     name: ''
     namespace: argocd
     server: 'https://kubernetes.default.svc'
   source:
-    path: nexus/platform/cicd/apps
+    path: nexus/platform/cicd/artifactory
     repoURL: 'https://github.com/shukla2009/helm-nginx.git'
     targetRevision: main
   project: default
