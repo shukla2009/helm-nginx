@@ -11,4 +11,4 @@ spec:
     path: nexus/platform/monitoring
     repoURL: 'https://github.com/shukla2009/helm-nginx.git'
     targetRevision: main
-  project: default
+  project: monitoring
