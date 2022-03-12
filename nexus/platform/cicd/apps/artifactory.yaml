@@ -8,7 +8,7 @@ spec:
     namespace: argocd
     server: 'https://kubernetes.default.svc'
   source:
-    path: nexus/platform/cicd/jenkins
+    path: nexus/platform/cicd/artifactory
     repoURL: 'https://github.com/shukla2009/helm-nginx.git'
     targetRevision: main
   project: default
