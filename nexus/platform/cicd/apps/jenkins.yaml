@@ -2,10 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: jenkins
+  namespace: "argocd"
 spec:
   destination:
-    name: ''
-    namespace: argocd
+    name: 'jenkins'
+    namespace: default
     server: 'https://kubernetes.default.svc'
   source:
     path: nexus/platform/cicd/jenkins
