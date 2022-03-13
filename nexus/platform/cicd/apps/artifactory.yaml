@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: artifactory1
+  name: artifactory
 spec:
   destination:
     name: ''
